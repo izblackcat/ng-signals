@@ -1,0 +1,14 @@
+<div class="p-4 mt-2 grid grid-cols-3 gap-4">
+
+    @for (product of products(); track product.id) {
+        <div class="bg-rose-50 outline outline-1 outline-rose-600 shadow-lg shadow-purple-600 rounded-2xl px-2 py-10 text-center space-y-6">
+            <!-- <h2>{{product.name}}</h2> -->
+             <p class="text-xl font-bold text-slate-800">{{product.name}}</p>
+            <p class="font-semibold text-slate-600">{{product.price}} MAD</p>
+            <div class="space-x-5">
+                <button class="py-2 px-4 rounded-lg text-white font-semibold bg-green-600 hover:bg-green-500" (click)="select(product)">{{product.isSelected ? "UNSELECT" : "SELECT"}}</button>
+                <button class="py-2 px-4 rounded-lg text-white font-semibold bg-red-500 hover:bg-red-700" (click)="delete(product)">DELETE</button>
+            </div>
+        </div>
+    }
+</div>
