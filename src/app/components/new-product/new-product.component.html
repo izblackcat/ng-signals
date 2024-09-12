@@ -1,7 +1,9 @@
 
 <div class="container mx-auto p-4">
     <div class="text-center">
-        <button class="py-2 px-4 rounded-lg text-white font-semibold bg-blue-500 hover:bg-blue-700" (click)="openNewProductModal()">NEW PRODUCT</button>
+        <app-button status="default" (buttonClick)="openNewProductModal()">
+            New Product
+        </app-button>
     </div>
 
     <div [ngClass]="isnewProductModelOpen() ? 'block':'hidden'" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center" (click)="closeModalOnClickOutside($event)">
@@ -18,14 +20,10 @@
 
                 <input class="py-2 rounded-lg px-4 outline outline-1 outline-purple-500" type="number" name="price" placeholder="Product price" formControlName="price">
 
-                <!-- here -->
+
                 <div class="space-x-4">
-                    <button class="bg-green-600 hover:bg-green-500 text-white px-4 py-2 rounded" [disabled]="newProductForm.status !== 'VALID'">
-                        ADD
-                    </button>
-                    <button class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded" (click)="closeNewProductModal()">
-                        CLOSE
-                    </button>
+                    <app-button status="success">ADD</app-button>
+                    <app-button status="danger" (buttonClick)="closeNewProductModal()">CLOSE</app-button>
                 </div>
             </form>
             
