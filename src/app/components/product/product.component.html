@@ -1,0 +1,10 @@
+<div
+    class="outline outline-1 outline-violet-500 shadow-lg shadow-purple-600 rounded-2xl px-2 py-10 text-center space-y-6 hover:bg-purple-200">
+
+    <p class="text-xl font-semibold text-slate-800">{{name}}</p>
+    <p class="font-semibold text-slate-600">{{price}} MAD</p>
+    <div class="space-x-5">
+        <app-button status="success" (buttonClick)="select(id)">{{isSelected ? "UNSELECT" : "SELECT"}}</app-button>
+        <app-button status="danger" (buttonClick)="delete(id)">DELETE</app-button>
+    </div>
+</div>
