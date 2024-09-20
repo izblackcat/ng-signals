@@ -1,9 +1,12 @@
-
-<div class="p-4 w-1/3 mb-4 mx-auto outline outline-1 outline-purple-500 flex justify-between">
-    <div class="py-4 px-8 rounded-lg outline outline-1 outline-blue-500">
-        Selected products : <span class="text-slate-600 font-semibold">{{selectedProductsCount()}}</span>
+<div
+    class="p-8 w-screen md:w-1/2 mb-4 md:mx-auto outline outline-1 outline-purple-500 flex flex-col md:flex-row space-y-4 md:space-y-0 space-x-0 md:space-x-6 justify-between">
+    <div class="flex justify-between my-3 py-4 px-8 rounded-lg outline outline-1 outline-blue-500">
+        <p>Selected products : <span class="text-slate-600 font-semibold">{{selectedProductsCount()}}</span></p>
     </div>
-    <div class="py-4 px-8 rounded-lg outline outline-1 outline-red-500">
-        Total : <span class="text-slate-600 font-semibold">{{totalPrice()}} MAD</span>
+    <div class="flex justify-between my-3 py-4 px-8 rounded-lg outline outline-1 outline-red-500">
+        <p>
+            Total :
+            <span class="text-slate-600 font-semibold">{{totalPrice()}} MAD</span>
+        </p>
     </div>
 </div>

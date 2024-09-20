@@ -6,20 +6,25 @@
         </button>
     </div>
 
-    <div [ngClass]="isModalOpen() ? 'block':'hidden'" class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center" (click)="closeModalOnClickOutside($event)">
+    <div [ngClass]="isModalOpen() ? 'block':'hidden'"
+        class="fixed inset-0 bg-gray-800 bg-opacity-75 flex justify-center items-center"
+        (click)="closeModalOnClickOutside($event)">
         <div class="bg-white dark:bg-gray-900 dark:text-gray-100 p-8 rounded-lg max-w-md w-full relative">
             <h2 class="text-2xl font-bold mb-4 text-slate-600">Modal Title</h2>
-            <p class="mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt unde incidunt delectus earum voluptas vero non numquam eaque, quae cumque, repudiandae nesciunt pariatur optio assumenda corrupti consequatur distinctio asperiores omnis.
-            Consequuntur vero totam fugit placeat, nihil temporibus aspernatur hic provident assumenda quae cupiditate sed, adipisci aut cumque? Veniam est corrupti rerum dolorum vel nobis debitis. Eaque officia commodi illo saepe?</p>
+            <p class="mb-6">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt unde incidunt delectus
+                earum voluptas vero non numquam eaque, quae cumque, repudiandae nesciunt pariatur optio assumenda
+                corrupti consequatur distinctio asperiores omnis.
+                Consequuntur vero totam fugit placeat, nihil temporibus aspernatur hic provident assumenda quae
+                cupiditate sed, adipisci aut cumque? Veniam est corrupti rerum dolorum vel nobis debitis. Eaque officia
+                commodi illo saepe?</p>
             <button class="absolute top-2 right-2 text-gray-600 hover:text-gray-900" (click)="closeModal()">
-                <!-- <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
-                  </svg> -->
 
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6 text-gray-600">
-                    <path stroke-linecap="round" stroke-linejoin="round" d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
-                  </svg>                  
-                  
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-6 text-gray-600">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+
             </button>
 
             <button class="bg-red-600 hover:bg-red-500 text-white px-4 py-2 rounded" (click)="closeModal()">

@@ -28,7 +28,6 @@ export class NewProductComponent implements OnInit {
   }
 
   onAddNewProduct() {
-    console.log(this.newProductForm);
     let newProduct: Product = {
       name: this.newProductForm.value.name,
       price: this.newProductForm.value.price,
