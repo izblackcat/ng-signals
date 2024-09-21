@@ -20,6 +20,9 @@ export class ProductComponent {
   @Input('name')
   name: string = '';
 
+  @Input('image')
+  image: string | undefined;
+
   @Input('price')
   price: number = 0;
 
